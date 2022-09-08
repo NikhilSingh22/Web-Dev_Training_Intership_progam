@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.265);
+    overflow: hidden;
+}
+.main_container{
+    width:100%;
+    height:100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    z-index: 1;
+    display: flex;
+    width:calc(100%);
+    padding-right: 10px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.navbar h2{
+    color: whitesmoke;
+    display: flex;
+    width: 100%;
+    margin: 0 1rem;
+    padding:  0.4rem;
+    justify-content: left;
+}
+
+.navbar ul li{
+    margin: 0 1rem;
+    padding:  0.5rem;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+/* .nav ul li:hover{
+    background: rgb(210, 31, 31);
+    border-radius: 8px;
+} */
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+#home{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top:40px;
+    scroll-snap-align: center;
+}
+
+section{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    height:calc(100vh);
+    scroll-snap-align: center;
+    overflow: hidden;
+}
+
+.container_2{
+    height: calc(100vh - 20%);
+    margin: 6% 0% 3% 0%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display:flex;
+
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    flex:0.5;
+    margin:0 10px 10px 10px;
+    border-radius: 25px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    
+}
+
+.panel.active{
+    flex:5;
+}
+
+.panel h3{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: whitesmoke;
+    position: absolute;
+    bottom: 5px;
+    left: 8px;
+    opacity:0;
+}
+
+
+.panel.active h3{
+    opacity: 1;
+    transition: 0.5s ease-in 0.4s;
+}
+
+section h2{
+   text-align: center;
+}
+
+
+ #main_form{
+    background-color: #ffffff;
+    width: 75%;
+    min-width:420px;
+    padding: 35px 50px;
+    height:calc(100vh - 150px);
+    margin: auto;
+    margin-top:50px;
+    border-radius: 10px;
+    box-shadow: 20px 30px 25px rgba(0,0,0,0.15);
+} 
+
+ /* #form h2{
+    margin-top: 0px;
+} */
+
+form{
+    width: 80%;
+    position:relative;
+    margin: 30px auto 0 auto;
+}
+.row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 20px 30px;
+    margin-bottom: 20px;
+}
+
+label{
+    color: #1c093c;
+    font-size:16px;
+}
+
+input{
+    width: 100%;
+    font-weight: 400;
+    padding: 8px 8px;
+    border-radius: 5px;
+    border: 1.2px solid #c4cae0;
+    margin-top: 5px;
+}
+button{
+    border: none;
+    width: 100%;
+    background:();
+    padding: 8px 8px;
+    border-radius: 5px;
+}
+#Parking_lots{
+    overflow: visible;
+    height:100%;
+}
+ #Parking_div{
+    width:100%;
+    height:100%;
+}
+#Parking_div h2{
+    margin-top: 50px;
+}
+
+table th{
+    border: 2px solid Black;
+    height: 50px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top:15px;
+}
+
+#show th, #show td{
+    border: 2px solid Black;
+    height: 20px;
+    padding:8px;
+    text-align: center;
+}
+#btn td input{
+    width: 100%;
+    text-align: center;
+}
+
+
+ #about{
+     overflow: visible; 
+}
+.m_about_head {
+    margin-top: 80px;
+    font-size: 30px;
+}
+
+.cards_main{
+    display:flex;
+    width: 90%;
+    margin: 30px auto;
+    justify-content: space-evenly;
+}
+
+.cards{
+    width:400px;
+    background: #ffffff;
+    margin: 10px 15px;
+    padding: 50px 5px;
+    border-radius: 8px;
+    text-align: justify;
+    box-shadow: 20px 30px 25px rgba(0,0,0,0.15);
+}
+.cards h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.cards p{
+    line-height: 1.5;
+}
+
+.icon{
+    font-size: 100px;
+    color: grey;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* media query */
+@media all and (max-width: 699px) and (min-width:420px)
+{
+    .navbar{
+        height: 70px;  
+    }
+    
+    .navbar h2{
+        margin: 0 2px;
+        padding:  0.4rem 0;
+        justify-content: left;
+    }
+    
+    .navbar ul li{
+        margin: 0 2px;
+        padding: 1rem 0.5rem;
+    }
+
+    .container_2{
+        height: calc(100vh - 70px);
+        margin-top:70px;
+    }
+
+    #main_form{
+        height:calc(100vh - 120px);
+        padding: 10px 5px;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+    } 
+
+    form{
+        width: 85%;
+        margin: 15px  30px;
+        padding-top:20px;
+        
+    }
+    .row{
+        width: 100%;
+        display: block;
+        margin:0;
+    }
+    .column{
+        margin:20px;
+    }
+    
+    label{
+        font-size:14px;
+    }
+    
+    input{
+        width: 60%;
+        font-weight: 400;
+        float:right;
+        padding: 5px 0px;
+        border-radius: 5px;
+        border: 1.2px solid #c4cae0;
+        margin-top: 0px;
+    }
+    button{
+        border: none;
+        width: 75%;
+        margin-top:20px;
+        margin-left: 50px;
+        padding: 8px 8px;
+        border-radius: 5px;
+    }
+
+
+
+
+    #Parking_lots{
+        height:100%;
+    }
+    #Parking_div h2{
+        margin-top: 80px;
+    }
+    
+    table th{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    #show th, #show td{
+        border: 2px solid Black;
+        height: 20px;
+        padding:4px;
+        background-color: #ffffff;
+        text-align: center;
+    }
+    #show td{
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+
+
+
+
+    .m_about_head {
+        margin-top: 80px;
+        font-size: 20px;
+    }
+    
+    .cards_main{
+        display:flex;
+        width: 90%;
+        margin: 30px auto;
+        justify-content: space-between;
+    }
+    
+    .cards{
+        width:400px;
+        height:400px;
+        background: #ffffff;
+        margin: 5px 10px;
+        padding: 5px;
+    }
+    .cards h2{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    
+    .cards p{
+        padding-top:10px;
+        line-height:1.2;
+    }
+    
+    .icon{
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+}
